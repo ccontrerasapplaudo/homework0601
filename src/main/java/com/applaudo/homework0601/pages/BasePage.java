@@ -64,6 +64,10 @@ public class BasePage {
         softAssert.assertAll();
     }
 
+    protected void validateTextHardAssert(WebElement element,String expectedText){
+        Assert.assertEquals(element.getAttribute("innerText"),expectedText,"The page number is not correct");
+    }
+
     protected void verifyIfTextIsPresentOnWebPage(List<WebElement> elements){
         Assert.assertNotEquals(0,elements.size(),"The word is not present on the webpage");
     }
@@ -90,5 +94,11 @@ public class BasePage {
 
     protected void submitForm(WebElement element){
         element.submit();
+    }
+
+    public void waitTime() throws InterruptedException {
+        synchronized (driver){
+            driver.wait(1500);
+        }
     }
 }

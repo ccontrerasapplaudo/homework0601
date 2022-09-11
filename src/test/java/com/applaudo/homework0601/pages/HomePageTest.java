@@ -1,11 +1,13 @@
 package com.applaudo.homework0601.pages;
 
 import com.applaudo.homework0601.BaseTest;
+import com.applaudo.homework0601.retries.HomePageRetry;
 import org.testng.annotations.*;
 
 public class HomePageTest extends BaseTest {
 
     private HomePage homePage;
+    private int counter = 0;
 
     @BeforeClass(alwaysRun = true)
     public void setupPages(){
@@ -20,9 +22,12 @@ public class HomePageTest extends BaseTest {
         System.out.println("Finishing Test 1 of HomePage\n");
     }
 
-    @Test(priority = 2,groups = "homePageGroup")
-    public void analyzeWithIRetry(){
+    @Test(priority = 2,groups = "homePageGroup",retryAnalyzer = HomePageRetry.class)
+    public void analyzeWithIRetry() throws InterruptedException {
         System.out.println("Executing Test 2 of HomePage\n");
+        homePage.testTwoHomePage("5/5",counter);
+        counter++;
+        waitTime();
         System.out.println("Finishing Test 2 of HomePage\n");
     }
 

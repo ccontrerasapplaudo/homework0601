@@ -15,6 +15,12 @@ public class HomePage extends BasePage{
     @FindBy(css = "div.trending-top-searches a")
     List<WebElement> buttonTopSearches;
 
+    @FindBy(xpath = "//p[@class=\"description\"]/following::div[contains(text(),\"/\")]")
+    List<WebElement> divPageNumber;
+
+    @FindBy(className = "slick-next")
+    WebElement buttonSlideNext;
+
     public HomePage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
@@ -23,6 +29,12 @@ public class HomePage extends BasePage{
     public void testOneHomePage(String url){
         visitWebPage(url);
         validateURL(url);
+    }
+
+    public void testTwoHomePage(String expectedText,int index) throws InterruptedException {
+        waitAndClickElement(buttonSlideNext);
+        waitTime();
+        validateTextHardAssert(divPageNumber.get(index),expectedText);
     }
 
     public void testThreeHomePage(String buttonText,int index){
