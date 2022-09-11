@@ -1,0 +1,1 @@
+allure serve C:\Users\carlo\IdeaProjects\homework0601\allure-results
