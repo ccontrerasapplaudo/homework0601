@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
+import java.util.List;
 
 public class BasePage {
     public static final int SECONDS = 20;
@@ -25,6 +26,10 @@ public class BasePage {
         driver.get(url);
     }
 
+    protected void returnPreviousPage(){
+        driver.navigate().back();
+    }
+
     protected void waitForElementVisibility(WebElement element){
         try{
             wait.until(ExpectedConditions.visibilityOf(element));
@@ -36,7 +41,7 @@ public class BasePage {
     protected void sendKeysToElement(WebElement element,String text){
         waitForElementVisibility(element);
         element.clear();
-        element.sendKeys();
+        element.sendKeys(text);
     }
 
     protected void waitAndClickElement(WebElement element){
@@ -54,5 +59,8 @@ public class BasePage {
         softAssert.assertAll();
     }
 
+    protected void verifyIfTextIsPresentOnWebPage(List<WebElement> elements){
+        Assert.assertNotEquals(0,elements.size(),"The word is not present on the webpage");
+    }
 
 }

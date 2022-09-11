@@ -12,9 +12,9 @@ import java.util.Objects;
 
 public class BaseTest {
 
-    public WebDriver driver;
+    public static WebDriver driver;
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void setUp(){
         System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"null");
         driver = WebDriverManager.firefoxdriver().create();

@@ -9,10 +9,6 @@ import org.testng.asserts.SoftAssert;
 import java.util.List;
 
 public class HomePage extends BasePage{
-
-//    @FindBy(id = )
-//    private
-
     @FindBy(xpath = "//a[contains(.,'Digital Collections')]")
     WebElement aDigitalCollectionsButton;
 

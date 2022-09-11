@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="TestNgMavenExampleSuite" parallel="false">
-    <test name="HomePageTest">
+<suite name="Suite1" parallel="false">
+    <test name="WebPageTest" preserve-order="true">
+        <groups>
+            <run>
+                <include name="homePageGroup" />
+                <include name="digitalCollectionsGroup" />
+            </run>
+        </groups>
+<!--        <dependencies>-->
+<!--            <group name="digitalCollectionsGroup" depends-on="homePageGroup"/>-->
+<!--        </dependencies>-->
         <classes>
-            <class name="com.applaudo.homework0601.HomePageTest"/>
+            <class name="com.applaudo.homework0601.pages.HomePageTest"/>
+            <class name="com.applaudo.homework0601.pages.DigitalCollectionsPageTest"/>
         </classes>
     </test>
 </suite>
