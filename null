@@ -1,14 +1,15 @@
-1662881058771	geckodriver	INFO	Listening on 127.0.0.1:65229
-1662881060064	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65189" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://localhost:65189/" "-no-remote" "-profile" "C:\\Users\\carlo\\AppData\\Local\\Temp\\rust_mozprofilezXcGCX"
-1662881060425	Marionette	INFO	Marionette enabled
-1662881060429	Marionette	INFO	Listening on port 57967
-WebDriver BiDi listening on ws://localhost:65189
-Read port: 57967
-1662881060638	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\carlo\\AppData\\Local\\Temp\\rust_mozprofilezXcGCX\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:65189/devtools/browser/9f30f688-d515-4979-8f8b-9154fc066218
+1662887334808	geckodriver	INFO	Listening on 127.0.0.1:59810
+1662887336159	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54467" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://localhost:54467/" "-no-remote" "-profile" "C:\\Users\\carlo\\AppData\\Local\\Temp\\rust_mozprofile3lrHQE"
+1662887336467	Marionette	INFO	Marionette enabled
+1662887336471	Marionette	INFO	Listening on port 61996
+WebDriver BiDi listening on ws://localhost:54467
+Read port: 61996
+1662887336565	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\carlo\\AppData\\Local\\Temp\\rust_mozprofile3lrHQE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54467/devtools/browser/0642aed3-ea3d-440a-9826-08ef5f0fd00b
 JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.loc.gov."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.loc.gov."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.loc.gov."
-1662881089799	Marionette	INFO	Stopped listening on port 57967
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.research.net."
+1662887372848	Marionette	INFO	Stopped listening on port 61996

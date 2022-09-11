@@ -14,6 +14,15 @@ public class SurveyPage extends BasePage{
     @FindBy(xpath = "//div[contains(@class, \"question vertical\")]")
     List<WebElement> divQuestions;
 
+    @FindBy(css = "label.answer-label")
+    List<WebElement> rdoTakeSurvey;
+
+    @FindBy(name = "surveyForm")
+    WebElement formSurvery;
+
+    @FindBy(xpath = "//div[contains(@class, \"thanks-message\")]")
+    WebElement divThanksMessage;
+
     public SurveyPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
@@ -27,10 +36,14 @@ public class SurveyPage extends BasePage{
     public void testNineSurveyPage(int expectedNumber){
         verifyNumberOfElements(divQuestions,expectedNumber);
     }
-    public void testTenSurveyPage(){
-
+    public void testTenSurveyPage(int answerNumber){
+        scrollToElement(rdoTakeSurvey.get(answerNumber));
+        waitAndClickElement(rdoTakeSurvey.get(answerNumber));
+        verifyIfSelected(rdoTakeSurvey.get(answerNumber));
     }
-    public void testElevenSurveyPage(){
-
+    public void testElevenSurveyPage(String expectedText){
+        submitForm(formSurvery);
+        waitForElementVisibility(divThanksMessage);
+        compareText(divThanksMessage.getText(),expectedText);
     }
 }

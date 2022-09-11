@@ -68,11 +68,27 @@ public class BasePage {
         Assert.assertNotEquals(0,elements.size(),"The word is not present on the webpage");
     }
 
+    protected void compareText(String actualText,String expectedText){
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(actualText,expectedText,"The text is not equal or is not present");
+        softAssert.assertAll();
+    }
+
     protected void scrollToElement(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
     protected void verifyNumberOfElements(List<WebElement> elements,int expectedNumber) {
         Assert.assertEquals(elements.size(),expectedNumber, "The number of elements is not correct");
+    }
+
+    protected void verifyIfSelected(WebElement element){
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(element.isEnabled(),"The element is not selected");
+        softAssert.assertAll();
+    }
+
+    protected void submitForm(WebElement element){
+        element.submit();
     }
 }

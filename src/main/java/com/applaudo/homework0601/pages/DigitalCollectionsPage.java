@@ -27,7 +27,6 @@ public class DigitalCollectionsPage extends BasePage{
     }
 
     public void testSixDigitalCollectionsPage(){
-        System.out.println();
         verifyIfTextIsPresentOnWebPage(elementContainingWord);
     }
 
