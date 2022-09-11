@@ -14,17 +14,19 @@ public class DigitalCollectionsPageTest extends BaseTest {
     }
 
     @Test(priority = 3,groups = "digitalCollectionsGroup")
-    public void verifyWordIsPresent(){
-        System.out.println("Executing Test 6 of HomePage");
+    public void verifyWordIsPresent() throws InterruptedException {
+        System.out.println("Executing Test 6 of DigitalCollectionsPage");
         digitalCollectionsPage.testSixDigitalCollectionsPage();
-        System.out.println("Finishing Test 6 of HomePage");
+        waitTime();
+        System.out.println("Finishing Test 6 of DigitalCollectionsPage");
     }
 
     @Test(priority = 4,groups = "digitalCollectionsGroup",dataProvider = "performSearchData")
-    public void performSearch(String search){
-        System.out.println("Executing Test 7 of HomePage");
+    public void performSearch(String search) throws InterruptedException {
+        System.out.println("Executing Test 7 of DigitalCollectionsPage");
         digitalCollectionsPage.testSevenDigitalCollectionsPage(search);
-        System.out.println("Finishing Test 7 of HomePage");
+        waitTime();
+        System.out.println("Finishing Test 7 of DigitalCollectionsPage");
     }
 
     @DataProvider

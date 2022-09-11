@@ -28,4 +28,10 @@ public class BaseTest {
         }
     }
 
+    public void waitTime() throws InterruptedException {
+        synchronized (driver){
+            driver.wait(1500);
+        }
+    }
+
 }

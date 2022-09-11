@@ -13,9 +13,10 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(priority = 1,groups = "homePageGroup")
-    public void navigateToPage(){
+    public void navigateToPage() throws InterruptedException {
         System.out.println("Executing Test 1 of HomePage");
         homePage.testOneHomePage("https://www.loc.gov/");
+        waitTime();
         System.out.println("Finishing Test 1 of HomePage");
     }
 
@@ -26,16 +27,18 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(priority = 2,groups = "homePageGroup",dataProvider = "validateSearchesData")
-    public void validateSearches(String buttonText,int index){
+    public void validateSearches(String buttonText,int index) throws InterruptedException {
         System.out.println("Executing Test 3 of HomePage");
         homePage.testThreeHomePage(buttonText,index);
+        waitTime();
         System.out.println("Finishing Test 3 of HomePage");
     }
 
     @Test(dependsOnMethods = {"navigateToPage","analyzeWithIRetry","validateSearches"},groups = "homePageGroup")
-    public void clickDigitalCollections(){
+    public void clickDigitalCollections() throws InterruptedException {
         System.out.println("Executing Test 4 of HomePage");
         homePage.testFourHomePage();
+        waitTime();
         System.out.println("Finishing Test 4 of HomePage");
     }
 

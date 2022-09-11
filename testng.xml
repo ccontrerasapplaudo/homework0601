@@ -5,14 +5,16 @@
             <run>
                 <include name="homePageGroup" />
                 <include name="digitalCollectionsGroup" />
+                <include name="SurveyGroup" />
             </run>
         </groups>
-<!--        <dependencies>-->
-<!--            <group name="digitalCollectionsGroup" depends-on="homePageGroup"/>-->
-<!--        </dependencies>-->
+        <dependencies>
+            <group name="digitalCollectionsGroup" depends-on="homePageGroup"/>
+        </dependencies>
         <classes>
             <class name="com.applaudo.homework0601.pages.HomePageTest"/>
             <class name="com.applaudo.homework0601.pages.DigitalCollectionsPageTest"/>
+            <class name="com.applaudo.homework0601.pages.SurveyPageTest"/>
         </classes>
     </test>
 </suite>

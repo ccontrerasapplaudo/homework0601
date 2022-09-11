@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2656c377-80f8-4bd0-85b5-d5c9a6b188a1" name="Changes" comment="Implementing test 1,3,4 of the Homepage">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/applaudo/homework0601/pages/DigitalCollectionsPageTest.java" afterDir="false" />
+    <list default="true" id="2656c377-80f8-4bd0-85b5-d5c9a6b188a1" name="Changes" comment="Implementing test 6,7 of DigitalCollectionsPage">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/applaudo/homework0601/pages/SurveyPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/null" beforeDir="false" afterPath="$PROJECT_DIR$/null" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/applaudo/homework0601/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/applaudo/homework0601/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/applaudo/homework0601/pages/DigitalCollectionsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/applaudo/homework0601/pages/DigitalCollectionsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/applaudo/homework0601/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/applaudo/homework0601/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/applaudo/homework0601/pages/SurveyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/applaudo/homework0601/pages/SurveyPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/applaudo/homework0601/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/applaudo/homework0601/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/applaudo/homework0601/HomePageTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/applaudo/homework0601/pages/DigitalCollectionsPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/applaudo/homework0601/pages/DigitalCollectionsPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/applaudo/homework0601/pages/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/applaudo/homework0601/pages/HomePageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
@@ -55,22 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;TestNG&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/carlo/IdeaProjects/homework0501&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "TestNG",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG": "",
+    "last_opened_file_path": "C:/Users/carlo/IdeaProjects/homework0502POM",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -130,7 +127,7 @@
       <workItem from="1662848300946" duration="33000" />
       <workItem from="1662848359302" duration="254000" />
       <workItem from="1662848622146" duration="17124000" />
-      <workItem from="1662870234007" duration="3039000" />
+      <workItem from="1662870234007" duration="7904000" />
     </task>
     <task id="LOCAL-00001" summary="Implementing test 1,3,4 of the Homepage">
       <created>1662858401098</created>
@@ -139,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662858401098</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implementing test 6,7 of DigitalCollectionsPage">
+      <created>1662873307134</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662873307134</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +163,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Implementing test 1,3,4 of the Homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing test 1,3,4 of the Homepage" />
+    <MESSAGE value="Implementing test 6,7 of DigitalCollectionsPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing test 6,7 of DigitalCollectionsPage" />
   </component>
 </project>

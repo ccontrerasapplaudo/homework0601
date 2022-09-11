@@ -1,5 +1,6 @@
 package com.applaudo.homework0601.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +29,10 @@ public class BasePage {
 
     protected void returnPreviousPage(){
         driver.navigate().back();
+    }
+
+    protected void navigateToPage(String url){
+        driver.navigate().to(url);
     }
 
     protected void waitForElementVisibility(WebElement element){
@@ -63,4 +68,11 @@ public class BasePage {
         Assert.assertNotEquals(0,elements.size(),"The word is not present on the webpage");
     }
 
+    protected void scrollToElement(WebElement element){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    protected void verifyNumberOfElements(List<WebElement> elements,int expectedNumber) {
+        Assert.assertEquals(elements.size(),expectedNumber, "The number of elements is not correct");
+    }
 }

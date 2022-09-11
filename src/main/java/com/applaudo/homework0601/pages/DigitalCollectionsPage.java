@@ -15,7 +15,7 @@ public class DigitalCollectionsPage extends BasePage{
     @FindBy(css = "button.header-search-button")
     WebElement buttonSearch;
 
-    @FindBy(xpath = "//*[contains(text(),\"Digital Collections2\")]")
+    @FindBy(xpath = "//*[contains(text(),\"Digital Collections\")]")
     List<WebElement> elementContainingWord;
     public DigitalCollectionsPage(WebDriver driver) {
         super(driver);
