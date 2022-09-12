@@ -9,6 +9,9 @@ import org.testng.asserts.SoftAssert;
 import java.util.List;
 
 public class HomePage extends BasePage{
+
+//  Merge Completed
+
     @FindBy(xpath = "//a[contains(.,'Digital Collections')]")
     WebElement aDigitalCollectionsButton;
 
